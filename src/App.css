@@ -1,38 +1,385 @@
-.App {
-  text-align: center;
+*{
+	font-size:110%;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    
+	
+		background-color: var(--background-color);
+		color: var(--text-color);
+		transition: background-color 0.3s, color 0.3s;
+	  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.forgotp{
+	font-size: 50%;
+	margin-left: 20%;
+	color: black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.card {
+	width: 30%;
+	height: 100%;
+	border-radius: 20px;
+	transition: all .3s;
+    } 
+.card2 {
+	width: 100%;
+	height: 110%;
+	background-color: skyblue;
+	border-radius: 5%;
+	transition: all .2s;
+    }
+.card2:hover {
+	transform: scale(0.98);
+	border-radius: 20px;
+    }   
+.card:hover {
+	box-shadow: 0px 0px 30px 1px yellow;
+    }
+
+.nav {
+	height: 60px;
+	width: 100%;
+	background-color: black;
+	position: relative;
+    }
+.nav > .nav-header {
+	display: inline;
+    }
+.nav > .nav-header > .nav-title {
+	display: inline-block;
+	font-size: 30px;
+	color: yellow;
+	padding: 10px 10px 10px 10px;
+    }
+.nav > .nav-btn {
+	display: none;
+    }
+.nav > .nav-links {
+	display: inline;
+	margin: 10%;
+	font-size: 18px;
+    } 
+.nav > .nav-links > a {
+	display: inline-block;
+	margin-right: 50px;
+	padding: 13px 10px 13px 10px;
+	text-decoration: none;
+	color: yellow;
+    }
+.nav > .nav-links > a:hover {
+	background-color: rgba(0, 0, 0, 0.3);
+    }
+.nav > #nav-check {
+	display: none;
+    }
+@media (max-width:600px) {
+	.nav > .nav-btn {
+	display: inline-block;
+    position: absolute;
+    right: 0px;
+	top: 0px;
+	}
+.nav > .nav-btn > label {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	padding: 13px;
+	}
+.nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+	}
+.nav > .nav-btn > label > span {
+    display: block;
+	width: 25px;
+	height: 10px;
+    border-top: 2px solid white;
+	}
+.nav > .nav-links {
+	position: absolute;
+	display: block;
+	width: 100%;
+	background-color: gray;
+	height: 0px;
+	transition: all 0.3s ease-in;
+	overflow-y: hidden;
+	top: 50px;
+	left: 0px;
+	}
+.nav > .nav-links > a {
+    display: block;
+	width: 100%;
+	}
+.nav > #nav-check:not(:checked) ~ .nav-links {
+	height: 0px;
+	}
+.nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+	overflow-y: auto;
+	}
+}
+.button {
+	padding: 9px 12px;
+	gap: 8px;
+	height: 40px;
+	width: auto;
+	border: none;
+	background: red;
+	border-radius: 20px;
+	cursor: pointer;
+    }
+.lable {
+	line-height: 22px;
+	font-size: 20px;
+	color: white;
+	font-family: sans-serif;
+	letter-spacing: 1px;
+    }
+.button:hover {
+	background: red;
+    }
+
+#login {
+	border-radius: 10px;
+	background-color: yellowgreen;
+    }
+#login:hover{
+	background-color: green;
+    }
+#reg {
+	border-radius: 10px;
+	background-color: blueviolet;
+    }
+#reg:hover{
+	background-color: blue;
+    }
+
+.form {
+	--width-of-input: 300px;
+	--border-height: 1px;
+	--border-before-color: rgba(221, 221, 221, 0.39);
+	--border-after-color: black;
+	--input-hovered-color: yellow;
+	position: relative;
+	width: var(--width-of-input);
+    }
+   /* styling of Input */
+.input {
+	color: black;
+	font-size: 0.9rem;
+	background-color: transparent;
+	width: 100%;
+	box-sizing: border-box;
+	padding-inline: 0.5em;
+	padding-block: 0.7em;
+	border: none;
+	border-bottom: var(--border-height) solid var(--border-before-color);
+    }
+   /* styling of animated border */
+.input-border {
+	position: absolute;
+	background: var(--border-after-color);
+	width: 0%;
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	transition: 0.3s;
+}
+   /* Hover on Input */
+input:hover {
+	background: var(--input-hovered-color);
+}   
+input:focus {
+	outline: none;
+}
+   /* here is code of animated border */
+input:focus ~ .input-border {
+	width: 100%;
+}
+th {
+	background-color: #047baa;
+	color: white;
+}
+tr:nth-child(even) {background-color: white;}
+th, td {
+	padding: 8px;
+	text-align: left;
+}
+
+  #star{
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .on {
+	background: transparent;
+	color: yellow;
   }
-  to {
-    transform: rotate(360deg);
+  .off {
+	background: black;
+	color: black;
   }
+
+  .wrapper-2 p{
+	margin:0;
+	font-size:1.3em;
+	color:gray;
+	font-family: 'Source Sans Pro', sans-serif;
+	letter-spacing:1px;
+  }
+  .go-home{
+	color:white;
+	background:yellow;
+	border:none;
+	padding:10px 50px;
+	margin:30px 0;
+	border-radius:30px;
+	text-transform:capitalize;
+	box-shadow: 0 10px 16px 1px rgba(174, 199, 251, 1);
+  }
+	h1{
+  	font-family: 'Kaushan Script', cursive;
+  	font-size:3em;
+  	letter-spacing:3px;
+  	color:#58ffbf ;
+  	margin:0;
+	margin-bottom:20px;
 }
+
+/* BookDetails Component Styles */
+.b-container {
+	max-width: 1000px;
+	margin: 0 auto;
+  }
+  
+  .load-more {
+	text-align: center;
+	margin-top: 20px;
+  }
+  .error-message {
+	color: red;
+	font-size: 18px;
+  }
+
+/* Searchform Component Styles */
+  
+  /* Modal Styles */
+  .overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.7);
+	z-index: 2;
+	text-align: center;
+  }
+  
+  .modal-active {
+	display: block;
+  }
+  
+  .popup {
+	background: white;
+	width: 300px;
+	margin: 100px auto;
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: 0px 0px 10px #000;
+	position: relative;
+  }
+  
+  .close {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+	font-size: 24px;
+	color: #3b3b3b;
+  }
+  
+  /* Additional styles for displaying books in a row */
+.book-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center; 
+	margin: 0 -10px;
+	padding: 10px 0;
+	font-size: 12px;
+  }
+  
+  .book-card {
+	border: 5px solid black;
+	border-radius: 5px;
+	padding: 10px;
+	text-align: center;
+	transition: transform 0.3s;
+	margin: 20px;
+	display: inline-block; /* Display books inline in a row */
+	width: 400px; /* Set the width for each book card */
+  }
+  
+  .book-card:hover {
+	transform: scale(1.05); /* Hover effect for scaling up the card */
+	box-shadow: 0 4px 8px yellow;
+  }
+  
+  .book-card img {
+	max-width: 100%;
+	height: auto;
+	margin-bottom: 10px;
+  }
+  
+  /* Add more CSS styles as needed for your specific project. */
+  
+  /* Text color for light mode */
+  .light {
+	color: #000;
+  }
+  
+  /* Text color for dark mode */
+  .dark {
+	color: #fff;
+  }
+  
+  /* Default light mode */
+  :root {
+	--background-color: #f9f9f9;
+	--text-color: #333;
+  }
+  
+  /* Dark mode */
+  :root.dark-mode {
+	--background-color: #333;
+	--text-color: #fff;
+  }
+  
+
+  input[type="text"] {
+	width: 100%;
+	padding: 10px;
+	margin: 10px 0;
+	box-sizing: border-box;
+	border: 2px solid black;
+	border-radius: 5px;
+	font-size: 16px;
+	color: blue;
+	font-weight: bold;
+  }
+  
+  button {
+	padding: 10px 20px;
+	background-color: #db4437;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 20px;
+  }
+
+  
