@@ -50,6 +50,7 @@ export default function NavBar() {
           {un == null && <Link to="/">Home</Link>}
           {un != null && <Link to="/home">Home</Link>}
           {un != null && <Link to="/cp">Change Password</Link>}
+          {un != null && <Link to="/feedback">Feedback</Link>}
           {un != null && <Link to="/fileupload">Add Books</Link>}
           {un != null && admin !== "yes" && <Link to="/ocuser">Our Collections</Link>}
           {un != null && admin === "yes" && <Link to="/collections">Our Collections</Link>}

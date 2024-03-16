@@ -96,6 +96,7 @@ const Book = ({ volumeInfo }) => {
         </div>
         <div>Views: {clickCount}</div>
       </div>
+      
     </div>
   );
 };

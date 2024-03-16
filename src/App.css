@@ -382,4 +382,81 @@ th, td {
 	font-size: 20px;
   }
 
+  .chatbot-container {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+  }
+  
+  .feedback-container {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+	border-radius: 10px;
+	background-color: #f8f9fa;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .feedback-container h1 {
+	font-size: 24px;
+	margin-bottom: 20px;
+	color: #333;
+	text-align: center;
+  }
+  
+  .feedback-container form {
+	display: flex;
+	flex-direction: column;
+  }
+  
+  .feedback-container label {
+	margin-bottom: 5px;
+	color: #555;
+  }
+  
+  .feedback-container input[type="text"],
+  .feedback-container textarea {
+	padding: 10px;
+	margin-bottom: 15px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	font-size: 16px;
+  }
+  
+  .feedback-container textarea {
+	resize: vertical;
+  }
+  
+  .feedback-container .rating {
+	margin-bottom: 15px;
+  }
+  
+  .feedback-container .rating label {
+	display: inline-block;
+	margin-right: 5px;
+	font-size: 24px;
+	color: #ccc; /* Color for empty stars */
+	cursor: pointer;
+  }
+  
+  .feedback-container .rating label.on {
+	color: #ffc107; /* Color for filled stars */
+  }
+  
+  
+  
+  .feedback-container button[type="submit"] {
+	padding: 10px 20px;
+	background-color: #007bff;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 16px;
+	transition: background-color 0.3s;
+  }
+  
+  .feedback-container button[type="submit"]:hover {
+	background-color: #0056b3;
+  }
   

@@ -10,6 +10,7 @@ import ForgotPassword from "./ForgotPassword";
 import ChangePassword from "./ChangePassword";
 import AdminLogin from "./AdminLogin";
 import OCUser from "./OCUser";
+import Feedback from "./Feedback";
 
 function App() {
   return (
@@ -26,7 +27,7 @@ function App() {
           <Route path="/fileupload" element={<FileUpload />} />
           <Route path="/collections" element={<OurCollections />} />
           <Route path="/ocuser" element={<OCUser />} />
-          
+          <Route path="/feedback" element={<Feedback />} />
         </Routes>
       </BrowserRouter>
     </div>
