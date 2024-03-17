@@ -3,14 +3,14 @@ import { initializeApp } from "firebase/app";
 import { getDatabase, ref, push, set } from "firebase/database";
 import NavBar from "./NavBar";
 
+// Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyCUrhWH5frU_uTc9wMFQkHoyndLvaEaSg8",
-    authDomain: "e-library2023.firebaseapp.com",
-    databaseURL: "https://e-library2023-default-rtdb.firebaseio.com",
-    projectId: "e-library2023",
-    storageBucket: "e-library2023.appspot.com",
-    messagingSenderId: "852683206255",
-    appId: "1:852683206255:web:78b5f42d44a80e1711a79a"
+  apiKey: "AIzaSyBO3Y_-7HvXxT9hjtZgnwg20PcD8ZQlWfc",
+  authDomain: "e-library-77143.firebaseapp.com",
+  projectId: "e-library-77143",
+  storageBucket: "e-library-77143.appspot.com",
+  messagingSenderId: "599247874650",
+  appId: "1:599247874650:web:95b5617a29e5535830c663"
 };
 
 const firebaseApp = initializeApp(firebaseConfig);
